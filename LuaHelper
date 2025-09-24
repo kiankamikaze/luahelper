@@ -1,0 +1,73 @@
+ print('MEGABONK') -- Well, prints something.
+--Variables make something have value, see the code below.
+ local Steak = 6
+ local Falafel = 7 -- 6 7 so tuff boii
+--You can also print variables by printing the name of your variable. ex. print(Steak)
+--You can also add the value of variables together, see the code below.
+ print(Steak+Falafel) --Which obviously, becomes 13.
+
+--You can change the properties of object in the explorer eg. baseplate with basic math and variables. see the code below.
+ local Baseplate = game.Workspace.Baseplate -- Baseplate is the thing we want to change. game.Workplace.Baseplate is the path to the baseplate. Now, we can easily change the properties of Baseplate.
+
+ Baseplate.Material = "Brick" -- Will change the texture (the thing baseplate is made of) to whatever you want.
+ Baseplate.Anchored = false --Will change if the baseplate will be anchored or not (will the baseplate move or not). Basically means that will it have physics or not.
+--You can basically change every properties a object has with scripts.
+
+--You can use functions to do cool things, here's how to use a function:
+
+ local function MyFunction()
+ local FavoriteNumber = 7
+local LowestNumber = 1	 -- This is also an example thing i wanted to use in the function.
+print(FavoriteNumber+LowestNumber) -- This will print FavoriteNumber and LowestNumber.
+end --This means the funciton is over.
+
+MyFunction() -- This will run the function. If you don't put this, the function will never run.
+
+-- Scope is when you want to decide if 2 functions can run the same thing or not, meaning you can decide if it can do or print something, if not, it will show you nill, if you do, it will show it normally. see the code below to understand it:
+
+local function	Test1() -- This is a function.
+local value = 1 -- This is a local value. It can only be used in this function.
+print(value) -- This will print my local value.
+end -- This means the function is over.
+
+Test1() -- This shows the function.
+
+local function Test2()
+print(value) -- This will print nill, because the value is not in this function. It is only in the other function.
+end
+
+Test2()
+
+-- If you print Test2, it will show you nill, because the value is not in this function. It is only in the other function.
+-- You have to remove the local in the value, to make it work.
+
+-- Here's an example code that will make both functions be able to show the same value:
+
+local function Test1() -- This is a function.
+value= 1 -- This is the same value as the two functions before but it doesn't have a local in it. It can be used on both functions.
+print(value) -- This well, prints the value.
+end -- This means that the function is ended.
+
+local function Test2() -- This is a function.
+print(value) -- This well, prints the value.
+end -- This means the function is over.
+
+Test1() -- This runs function 1 which is Test1.
+Test2() -- This runs function 2 which is Test2.
+
+-- If you do it without local, it will show it normally, basically, "local" makes it literally "local" for that function only.
+
+-- Returning is a cool feature, it basically means that it will return the value of the function. See the code below to understand it:
+
+local function Example()
+	print("Example")
+	-- The rest of your code...
+	return "Whatever your text is"
+end
+
+-- the return function will not show because you have to make your function a value of a variable. see this code below to understand it:
+
+local Variable = Example()
+print(Variable)
+
+-- Basically you have to make your function a value of a variable, and then print the variable. It will print the return function.
