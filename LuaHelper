@@ -71,3 +71,53 @@ local Variable = Example()
 print(Variable)
 
 -- Basically you have to make your function a value of a variable, and then print the variable. It will print the return function.
+
+-- Parameters are also silly fun little things you can experiment with. see the code below to see how it works:
+
+--local function ExampleFunction(Example1,Example2) -- This is a function with two parameters.
+--print(Example1) -- This will print the value of Example1.
+--end -- This ends the function.
+
+--ExampleFunction("YourValue","YourValue2") -- This will run the function and print the value of Example1.
+
+-- This function only prints Example1, because in the function it is said to only print Example1. we can take advantage of this and run ExampleFunction how many times we want and change the value of Example1 to something different everytime resulting in different values.
+
+-- If statements are very useful because you can setup some crazy things with it. see this code below for a very simple example :
+
+-- local x = 1
+-- if x == 1 then -- This is a if statement. It checks if x is 1, if it is then it will run the code below.
+-- print("x is 1") -- This will print "x is 1" because x is 1.
+-- end -- This ends the if statement.
+
+-- The code here basically checks our function named x and checks if the value of x is 1 and if it is 1 then it will print "x is 1".
+-- This is a really simple things that you can do with if statments, also you can add two statements and check if atleast one of them is true, it will do whatever you want, heres an example:
+
+-- local x = 2
+-- local y = 1
+--if x == 1 or y == 1 then -- This is a if statement. It checks if x is 1, if it is then it will run the code below.
+-- print("x is 1") -- This will print "x is 1" because x is 1.
+--end -- This ends the if statement.
+
+--You can do A LOT with if statements, for example, in in-game events that you have to do specific things for the event to start, the game first checks the values, and then if the values are the same ones required for the event, it will launch it, or for example, you can make kill bricks that if the player touches them, well, they die.
+
+--There's also the wait element that you can use with if statements. It basically pauses the script for the amount of seconds you give it. For example:
+
+-- local Baseplate = game.Workspace.Baseplate -- This is a variable that holds the baseplate.
+-- if Baseplate.Anchored then
+--  Baseplate.Anchored = false -- This will unanchor the baseplate.
+--  wait(1) -- This will wait for 1 second.
+--  Baseplate.Anchored = true -- This will anchor the baseplate.
+
+-- You can check alot of things with else and elseif, they are additions to if. making you check things easier or better and possibly make some crash handlers with it! see the code below to see how it works :
+
+-- local x = 5 --The value we want to check.
+-- if x = 1 then -- This checks if x is 1.
+-- print("x is 1") -- If x == 1 , then it will print x is 1.
+--elseif x == 2 then -- elseif is basically another if statement if combined with else. in this example it checks if x == 2.\
+-- print("x is 2") -- If x == 2, then it will print x is 2.
+--elseif x == 3 then -- The same as the last one.
+-- print("x is 3") -- Prints x is 3.
+--elseif x == 4 then -- The same as the last one.
+-- print("x is 4") -- Prints x is 4.
+--else -- If none of the statements before were true, then it would print this.
+-- print("x is not 1, 2, 3, or 4.") -- Prints this.
